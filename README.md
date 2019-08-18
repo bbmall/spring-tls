@@ -40,3 +40,9 @@ keytool -importcert -noprompt -keystore ./server/server.jks -storepass secret -a
 keytool -importcert -noprompt -keystore ./server/server.jks -storepass secret -alias localhost -keypass secret -file  ./server/server.pem
 ```
 
+## Adding certificate to browser
+For Chrome - goto settings -> advanced -> Manage certificates.
+Now add `ca.pem` into trusted Authorities.
+
+## Shadow testing
+goto `https://localhost:8443` and log as `user` with pass `secret`
